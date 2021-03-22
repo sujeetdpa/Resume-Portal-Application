@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+        <title>View User</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <header><div th:replace="navbar.html"></div></header>
+    <body>
+        <div th:if="${#lists.isEmpty(usernames)}">No Record Found.</div>
+            <table th:unless=${#lists.isEmpty(usernames)} class="table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Usernames</th>
+                        <th scope="col">View</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr th:each=" username,stat: ${usernames}">
+                        <td th:text="${stat.index}">null</td>
+                        <td th:text="${username}">no username</td>
+                        <td><a th:href="@{/app/view/{user}(user=${username})}"><button class="btn btn-info"> View</button></a></td>
+                    </tr>
+                </tbody>
+            </table>
+    </body>
+</html>
