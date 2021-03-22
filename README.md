@@ -14,7 +14,7 @@ A dynamic website where user can register and create their resume and get a publ
 1.Frontend- HTML5,Bootstrap.<br>
 2.Backend- Java.<br>
 3.Framework-Spring Boot, Spring Security, Spring Data JPA.<br>
-4.Databse- MySQL.<br>
+4.Database- MySQL.<br>
 5.Tempelate Engine- Thymleaf.<br>
 
 # Project Related images.
