@@ -1,5 +1,5 @@
 # Resume-Portal-Application
-A website where user can register and create their resume and get a public link of the resume which can be shared.
+A dynamic website where user can register and create their resume and get a public link of the resume which can be shared.
 
 # How to run the project
 1.Require Java 8 or above, MySQl Server installed.
@@ -8,3 +8,9 @@ A website where user can register and create their resume and get a public link 
 4.You can either create a jar of the project and run it or run from the IDE and it will create all the required tables in the database;
 5.You need to manually insert a record for admin like(insert into user_login values(0,'Admin','Admin','<BCrypted password>','ROLE_ADMIN','<username>')).
 6.In the web Browser open http://localhost:8080/
+
+# Technology Used
+1.Frontend- HTML5,Bootstrap.
+2.Backend- Java
+3.Framework-Spring Boot, Spring Security, Spring Data JPA
+4.Databse- MySQL
