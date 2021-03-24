@@ -9,8 +9,6 @@ A dynamic website where user can register and create their resume and get a publ
 4.You can either create a jar of the project and run it or run from the IDE and it will create all the required tables in the database;<br>
 5.You need to manually insert a record for admin like(insert into user_login values(0,'Admin','Admin','<BCrypted password>','ROLE_ADMIN','<username>')).<br>
 6.In the web Browser open http://localhost:8080/<br>
-# Website is live at
-  Link- http://52.202.33.198:8080/
 
 
 
