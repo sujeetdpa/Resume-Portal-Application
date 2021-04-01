@@ -7,8 +7,9 @@ A dynamic website where user can register and create their resume and get a publ
 2.Open the project in suitable IDE like Eclipse IDE for Java EE or Intellij Idea so that it download all the required jars.<br>
 3.Create a databse with name "resume_portal" in MySQL databse.<br>
 4.You can either create a jar of the project and run it or run from the IDE and it will create all the required tables in the database;<br>
-5.You need to manually insert a record for admin like(insert into user_login values(0,'Admin','Admin','<BCrypted password>','ROLE_ADMIN','<username>')).<br>
-6.In the web Browser open http://localhost:8080/<br>
+5.You need to add the username and passwword of your database in application.properties file.<br>
+6.You need to manually insert a record for admin like(insert into user_login values(0,'Admin','Admin','<BCrypted password>','ROLE_ADMIN','<username>')).<br>
+7.In the web Browser open http://localhost:8080/<br>
 
 
 
