@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Template 2</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div>
+    <label class="control-label col-sm-2">Choose Template</label>
+    <select onchange="location = this.value;">
+        <option>Select Template</option>
+        <option th:each="template:${templates}" th:value="'/app/view/'+${user.username}+'/'+${template}" th:text="${template}">
+    </select>
+</div>
+<div  th:if="${unf==true}">
+    <h3 style="text-align:center" class="text-danger">User does not exist</h3>
+</div>
+<div  th:if="${dnp==true}">
+    <h3 style="text-align:center" class="text-warning">Details are not updated by user.</h3>
+</div>
+<h2 style="text-align: center;">Curriculum Vitae</h2>
+<h3>Sorry for inconvenience</h3>
+<h4>Template is under development :( </h4>
+<div th:if="${#request.remoteUser!=null}">
+    <a th:href="@{/user/add-details/{username}(username=${user.username})}"><button type="submit">Edit</button></a>
+</div>
+</body>
+</html>

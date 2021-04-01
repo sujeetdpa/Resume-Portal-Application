@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+    <head>
+     <title>All Users</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+    </head>
+    <header><div th:replace="adm/adminNavbar.html"></div></header>
+    <body>
+        <h1> All Users....</h1>
+        <table class="table">
+            <thead>
+                <tr>
+                <th scope="col">#</th>
+                <th scope="col">ID</th>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Username</th>
+                <th scope="col">Roles</th>
+                <th scope="col">Operations</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr th:each="user,ind: ${userlogins}">
+                    <td th:text="${ind.index}">Count</td>
+                    <td th:text="${user.id}">ID</td>
+                    <td th:text="${user.firstName}">First Name</td>
+                    <td th:text="${user.lastName}"></td>
+                    <td th:text="${user.username}">username</td>
+                    <td th:text="${user.roles}">Roles</td>
+                    <td><a th:href="@{/admin/view-user/{id}(id=${user.id})}"><button class="btn btn-info" th:if="${user.detailsUpdated==true}">View</button></a> </td>
+                    <td><a th:href="@{/admin/delete/{id}(id=${user.id})}"><button class="btn btn-danger">Delete</button></a></td>
+                </tr>
+            </tbody>
+        </table>
+    </body>
+</html>
