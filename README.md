@@ -20,7 +20,7 @@ A dynamic website where user can register and create their resume and get a publ
 4.Database- MySQL.<br>
 5.Tempelate Engine- Thymleaf.<br>
 
-# Project Related images.
+# Images :-
 1.Homepage.<br>
 ![Capture](https://user-images.githubusercontent.com/60792923/112015124-8979ba00-8b51-11eb-9016-8118896439b7.PNG)
 2.Register.<br>
